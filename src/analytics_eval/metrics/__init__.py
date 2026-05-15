@@ -19,6 +19,10 @@ from analytics_eval.metrics.base import (
     MetricCategory,
     MetricResult,
 )
+from analytics_eval.metrics.result.grain_correctness import GrainCorrectness
+from analytics_eval.metrics.result.result_accuracy import ResultAccuracy
+from analytics_eval.metrics.sql.execution_accuracy import ExecutionAccuracy
+from analytics_eval.metrics.sql.schema_adherence import SchemaAdherence
 
 __all__ = [
     # Base classes
@@ -26,4 +30,10 @@ __all__ = [
     "MetricResult",
     "MetricCategory",
     "EvaluationMode",
+    # SQL Correctness metrics
+    "ExecutionAccuracy",
+    "SchemaAdherence",
+    # Result Quality metrics
+    "ResultAccuracy",
+    "GrainCorrectness",
 ]

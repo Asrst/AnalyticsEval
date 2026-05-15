@@ -214,10 +214,7 @@ class AnalyticsMetric(ABC):
         Subclasses should override measure(), not evaluate().
         """
         if not self.can_evaluate(test_case):
-            missing = [
-                f for f in self.required_fields
-                if getattr(test_case, f, None) is None
-            ]
+            missing = [f for f in self.required_fields if getattr(test_case, f, None) is None]
             return MetricResult(
                 metric_name=self.name,
                 score=0.0,
