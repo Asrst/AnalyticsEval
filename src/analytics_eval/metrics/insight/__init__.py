@@ -1,0 +1,1 @@
+"""Insight quality metrics."""
